@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>box andriod</title>
+</head>
+<body>
+    <div class="container">
+        <span class="close"> &times; </span>
+        <img src="logo.jpg" alt="">
+        <div class="text">
+            <h1>Nederland FM</h1>
+             <p>this is app for shiyar</p>
+             <p>best coder</p>
+        </div>
+        
+        <button class="download">download</button>
+        
+    </div>
+
+
+    <script> 
+    var container = document.querySelector(".container");
+    var user = navigator.userAgent.toLocaleLowerCase();
+    if(user.includes("android")){
+        setTimeout(()=>{
+            container.style.display="flex";
+        },3000)
+        document.querySelector(".download").addEventListener("click",()=>{
+            window.open("https://play.google.com/store/apps/details?id=com.nederlandfm_live","_blank")
+        })
+    }else{
+ 
+            container.style.display = "none";
+            }
+    
+           
+            var close = document.querySelector(".close");
+            close.addEventListener("click", ()=>{
+                container.style.display = "none";
+            });
+    
+    </script>
+</body>
+</html>
